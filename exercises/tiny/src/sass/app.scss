@@ -1,0 +1,21 @@
+$types: (
+  "m": "margin",
+  "p": "padding",
+);
+$positions: (
+  "t": "top",
+  "r": "right",
+  "b": "bottom",
+  "l": "left",
+);
+
+@for $i from 1 through 5 {
+  $size: $i * 5;
+  @each $type in $types {
+    @each $position in $positions {
+      .#{nth($type, 1)}-#{nth($position, 1)}-#{$size} {
+        #{nth($type, 2)}-#{nth($position, 2)}: #{$size}px;
+      }
+    }
+  }
+}
