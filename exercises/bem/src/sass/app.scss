@@ -1,5 +1,5 @@
 body {
-    h1 {
+  h1 {
     color: #c69;
   }
 }
@@ -10,4 +10,25 @@ body {
   border-width: 1px;
   line-height: 20px;
   border-radius: 2px;
+
+  &.btn--mode-primary {
+    background-color: rgb(204, 68, 102);
+    color: rgb(255, 255, 255);
+  }
+
+  &.btn--mode-secondary {
+    background-color: rgb(237, 188, 200);
+  }
+
+  &__price {
+    padding: 1px 3px;
+    background-color: #008000;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    .btn__price {
+      background-color: #aaaaaa;
+    }
+  }
 }
